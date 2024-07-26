@@ -43,10 +43,8 @@ while game_on:
     
     #DETECT SNAKE
     
-    for snake_parts in snake.segments:
-        if snake_parts == snake.head:
-            pass
-        elif snake.head.pos() == snake_parts.pos():
+    for snake_parts in snake.segments[1::]:
+        if snake.head.pos() == snake_parts.pos():
             game_on = False
             score.game_over()
      
